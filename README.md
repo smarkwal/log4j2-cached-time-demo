@@ -9,8 +9,15 @@ If the result is not as expected, the thread will print a message to the console
 
 ### How to build and run
 
+To reproduce the issue with Log4j 2.20.0:
 ```shell
 mvn clean package
+java -jar target/log4j2-cached-time-demo-1.0-SNAPSHOT.jar
+```
+
+To validate the fix with Log4j 2.20.1-SNAPSHOT (enable profile "fixed"):
+```shell
+mvn clean package -P fixed
 java -jar target/log4j2-cached-time-demo-1.0-SNAPSHOT.jar
 ```
 
